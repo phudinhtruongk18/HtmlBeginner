@@ -1,9 +1,254 @@
 <style>
 .vip-btn {
-transition: opacity 0.15
+transition: opacity 5s,
+            box-shadow 5s;
+width: 40%;
+height: 30%;
+padding: 0%;
+margin: 2%;
+border: none;
+
+/*vertical itself */
+vertical-align: middle;
+}
+
+.vip-btn:hover {
+    opacity: 0.0;
+    box-shadow: 550px 550px 50px rgb(0, 0, 0, 0.35);
+}
+.vip-btn:active {
+    opacity: 0.5;
+    box-shadow: 550px 550px 50px rgb(0, 0, 0, 0.35);
+}
+
+.vip-img {
+    object-fit: contain;
+    object-position: center;
+    border-style: solid;
+    border-color: pink;
+}
+
+.vip-input {
+    font-size: 200px;
+    width: 40%;
+    margin-left: 10%;
+
+    vertical-align: middle;
+}
+.il-cl {
+    display: inline-block;
+}
+.grid-item {
+    background-color: plum;
+    border: 1px solid rgba(0, 0, 0, 0.8);
 }
 </style>
 
 <button class="vip-btn">
-Hi
+    <img class="vip-img" src="/eco-green.png" alt="Aram" width="80%" height="80%">
 </button>
+
+<input type="text" class="vip-input" placeholder="Click Me"/>
+
+<div>
+<p class="il-cl">Click the button to display the date and time as a string.</p>
+<p class="il-cl"> 555 Views</p>
+</div>
+
+<h1>Grid</h1>
+
+
+<div style="
+display: grid;
+grid-template-columns: 5rem 1fr 1fr ;
+column-gap: 2rem;
+row-gap: 2rem;
+">
+    <div class="grid-item" style="background-color: lightblue;">
+        <p class="il-cl"> 555 Views</p>
+    </div>
+    <div class="grid-item"
+    >
+        <p class="il-cl"> 555 Views</p>
+    </div>
+    <div class="grid-item"
+    >
+        <p class="il-cl"> 555 Views</p>
+    </div>
+    <div class="grid-item" 
+    style="
+    background-color: lightblue;
+    ">
+        <p class="il-cl"> 555 Views</p>
+    </div>
+    <div class="grid-item">
+        <p class="il-cl"> 555 Views</p>
+    </div>
+    <div class="grid-item">
+        <p class="il-cl"> 555 Views</p>
+    </div>
+</div>
+
+<h1>Flex</h1>
+
+<style>
+.flex-vip {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.flex-vip > div {
+    /* margin: 1%;
+    width: 200px; */
+    font-size: 36px;
+    /* text-align: center; */
+}
+</style>
+
+<div 
+class= "flex-vip"
+>
+    <div class="grid-item" style="
+    background-color: lightblue;
+    justify-content: center;
+    ">
+        <p class="il-cl"        
+        > Blue</p>
+    </div>
+    <div class="grid-item"
+    style="
+    flex: 1;
+    "
+    >
+        <p class="il-cl"
+        >  Views</p>
+    </div>
+    <div class="grid-item"
+    style="
+    flex: 1;
+    "
+    >
+        <p class="il-cl">  Views</p>
+    </div>
+    <div class="grid-item" style="background-color: lightblue;">
+        <p class="il-cl"> Blue</p>
+    </div>
+    <div class="grid-item"
+    style="
+    flex: 2;
+    "
+    >
+        <p class="il-cl">  Views</p>
+    </div>
+    <div class="grid-item"    
+    style="
+    flex: 2;
+    "
+    >
+        <p class="il-cl">  Views</p>
+    </div>
+</div>
+
+<h1>Flex</h1>
+
+<div 
+class= "flex-vip"
+style="
+    justify-content: center;
+"
+>
+    <div class="grid-item" style="
+    background-color: lightblue;
+    ">
+        <p class="il-cl"        
+        > Blue</p>
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        <p class="il-cl"
+        >  Views</p>
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        <p class="il-cl">  Views</p>
+    </div>
+    <div class="grid-item" style="background-color: lightblue;">
+        <p class="il-cl"> Blue</p>
+    </div>
+</div>
+
+<h1>Flex Around</h1>
+
+<div 
+class= "flex-vip"
+style="
+    justify-content: space-around;
+"
+>
+    <div class="grid-item" style="
+    background-color: lightblue;
+    ">
+        <p class="il-cl"        
+        > Blue</p>
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        <p class="il-cl"
+        >  Views</p>
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        <p class="il-cl">  Views</p>
+    </div>
+    <div class="grid-item" style="background-color: lightblue;">
+        <p class="il-cl"> Blue</p>
+    </div>
+</div>
+
+<h1>Flex Between</h1>
+
+<div 
+style="
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+"
+>
+    <div style="
+    background-color: lightblue;
+    ">
+        Blue
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        Views
+    </div>
+    <div class="grid-item"
+    style="
+    width: 10rem;
+    "
+    >
+        Views
+    </div>
+    <div class="grid-item" style="background-color: lightblue;">
+        Blue
+    </div>
+</div>
